@@ -4,6 +4,9 @@ const path = require('path');
 const request = require('request');
 
 const app = express();
+const appInsights = require("applicationinsights");
+appInsights.setup("az resource show -g fabmedical-y20 -n content-web --resource-type "Microsoft.Insights/components" --query properties.InstrumentationKey -o tsv");
+appInsights.start();
 
 app.use(express.static(path.join(__dirname, 'dist/content-web')));
 const contentApiUrl = process.env.CONTENT_API_URL || "http://40.112.173.8:3001";
