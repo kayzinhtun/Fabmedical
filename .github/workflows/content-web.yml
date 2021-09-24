@@ -16,7 +16,7 @@ env:
   imageRepository: 'content-web'
   resourceGroupName: 'fabmedical-ayadev20'
   containerRegistryName: 'fabmedicalY20'
-  containerRegistry: 'fabmedicalY20.azurecr.io'
+  containerRegistry: 'fabmedicaly20.azurecr.io'
   dockerfilePath: './content-web'
   tag: '${{ github.run_id  }}'
 
